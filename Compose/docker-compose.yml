@@ -96,7 +96,8 @@ services:
     container_name: consul
     restart: on-failure
     volumes:
-      - consul-data:/consul/config
+      - consul-config-data:/consul/config
+      - consul-data:/consul/data
     ports:
       - "8500:8500"
     networks:
@@ -178,5 +179,6 @@ services:
 
 volumes:
   elasticsearch-data:
+  consul-config-data:
   consul-data:
   sqlserver_2019-data:
