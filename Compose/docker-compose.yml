@@ -26,7 +26,7 @@ services:
       - "ACCEPT_EULA=Y"
       - "SA_PASSWORD=pass123!"
     ports:
-      - "1433:1433"
+      - "1533:1433"
     networks:
       - network-microservice
 
