@@ -24,7 +24,10 @@ services:
     restart: on-failure
     environment:
       - "ACCEPT_EULA=Y"
-      - "SA_PASSWORD=pass123!"
+      - "MSSQL_SA_PASSWORD=pass123!"
+    user: root
+    volumes:
+      - sqlserver_2019-data:/var/opt/mssql/data
     ports:
       - "1533:1433"
     networks:
@@ -176,3 +179,4 @@ services:
 volumes:
   elasticsearch-data:
   consul-data:
+  sqlserver_2019-data:
