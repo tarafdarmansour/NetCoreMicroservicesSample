@@ -93,6 +93,8 @@ services:
       - "15672:15672"
     networks:
       - network-microservice
+    volumes:
+      - rmq-data:/var/lib/rabbitmq
 
   consul:
     image: consul
@@ -187,3 +189,4 @@ volumes:
   sqlserver_2019-data:
   mongo-db:
   mongo-configdb:
+  rmq-data:
