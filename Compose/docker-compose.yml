@@ -41,6 +41,9 @@ services:
       - "28017:27017"
     networks:
       - network-microservice
+    volumes:
+      - mongo-db:/data/db
+      - mongo-configdb:/data/configdb
 
   elasticsearch:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.13.2
@@ -182,3 +185,5 @@ volumes:
   consul-config-data:
   consul-data:
   sqlserver_2019-data:
+  mongo-db:
+  mongo-configdb:
