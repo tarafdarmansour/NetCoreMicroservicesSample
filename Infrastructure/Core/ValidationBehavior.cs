@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Core
 {
-    public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
+    public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
         private readonly IValidatorFactory _validationFactory;
 
@@ -14,10 +14,7 @@ namespace Infrastructure.Core
             _validationFactory = validationFactory;
         }
 
-        public async Task<TResponse> Handle(
-            TRequest request,
-            CancellationToken cancellationToken,
-            RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
             var validator = _validationFactory.GetValidator(request.GetType());
             var result = validator?.Validate(new ValidationContext<TRequest>(request));
