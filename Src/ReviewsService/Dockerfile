@@ -6,8 +6,8 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Src/ReviewsService/ReviewsService.csproj", "Src/ReviewsService/"]
 COPY ["Src/ReviewsService/DataModel/DataModel.csproj", "Src/ReviewsService/DataModel/"]
-COPY ["Src/Events/Events.csproj", "Src/Events/"]
-COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+COPY ["Src/Shared/Core/Events/Shared.Core.Events.csproj", "Src/Shared/Core/Events/"]
+COPY ["Src/Shared/Infrastructure/Shared.Infrastructure.csproj", "Src/Shared/Infrastructure/"]
 RUN dotnet restore "Src/ReviewsService/ReviewsService.csproj"
 COPY . .
 WORKDIR "/src/Src/ReviewsService"

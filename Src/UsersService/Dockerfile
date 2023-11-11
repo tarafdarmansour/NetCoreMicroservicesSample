@@ -7,8 +7,8 @@ FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Src/UsersService/UsersService.csproj", "Src/UsersService/"]
 COPY ["Src/UsersService/DataModel/DataModel.csproj", "Src/UsersService/DataModel/"]
-COPY ["Src/Events/Events.csproj", "Src/Events/"]
-COPY ["Infrastructure/Infrastructure.csproj", "Infrastructure/"]
+COPY ["Src/Shared/Core/Events/Shared.Core.Events.csproj", "Src/Shared/Core/Events/"]
+COPY ["Src/Shared/Infrastructure/Shared.Infrastructure.csproj", "Src/Shared/Infrastructure/"]
 RUN dotnet restore "Src/UsersService/UsersService.csproj"
 COPY . .
 WORKDIR "/src/Src/UsersService"

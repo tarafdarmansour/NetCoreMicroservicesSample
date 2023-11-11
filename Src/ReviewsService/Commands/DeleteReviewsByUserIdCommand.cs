@@ -1,7 +1,5 @@
 ﻿using DataModel;
 using FluentValidation;
-using Infrastructure.Core.Commands;
-using Infrastructure.EventStores.Repository;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,6 +7,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Infrastructure.Core.Commands;
+using Infrastructure.EventStores.Repository;
 
 namespace ReviewsService.Commands
 {

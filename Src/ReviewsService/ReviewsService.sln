@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29911.84
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewsService", "ReviewsService.csproj", "{39100278-9C2C-4C53-8D2D-696CEEC99D70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReviewsService", "ReviewsService.csproj", "{39100278-9C2C-4C53-8D2D-696CEEC99D70}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Events", "..\Events\Events.csproj", "{A451BF13-B6BA-4368-B39A-F3C435E25567}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Core.Events", "..\Shared\Core\Events\Shared.Core.Events.csproj", "{A451BF13-B6BA-4368-B39A-F3C435E25567}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "..\..\Infrastructure\Infrastructure.csproj", "{7405C076-C9DF-4F5C-8B13-60340DD99CFC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Infrastructure", "..\Shared\Infrastructure\Shared.Infrastructure.csproj", "{7405C076-C9DF-4F5C-8B13-60340DD99CFC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModel", "DataModel\DataModel.csproj", "{2C8ADA00-EA24-4E8B-BA0C-3B57079B571C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataModel", "DataModel\DataModel.csproj", "{2C8ADA00-EA24-4E8B-BA0C-3B57079B571C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{05296D3F-479C-467B-9297-BF5E85A46385}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A451BF13-B6BA-4368-B39A-F3C435E25567} = {05296D3F-479C-467B-9297-BF5E85A46385}
+		{7405C076-C9DF-4F5C-8B13-60340DD99CFC} = {05296D3F-479C-467B-9297-BF5E85A46385}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A4A1ACA9-E33F-4D27-BFEB-C3EEB26511D2}
