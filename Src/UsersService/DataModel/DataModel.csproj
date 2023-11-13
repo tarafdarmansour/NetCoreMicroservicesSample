@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Events\Events.csproj" />
     <ProjectReference Include="..\..\Shared\Infrastructure\Shared.Infrastructure.csproj" />
   </ItemGroup>
 

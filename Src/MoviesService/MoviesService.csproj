@@ -23,8 +23,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Infrastructure\Infrastructure.csproj" />
-    <ProjectReference Include="..\Events\Events.csproj" />
     <ProjectReference Include="..\Shared\Core\Events\Shared.Core.Events.csproj" />
     <ProjectReference Include="..\Shared\Infrastructure\Shared.Infrastructure.csproj" />
     <ProjectReference Include="DataModel\DataModel.csproj" />
