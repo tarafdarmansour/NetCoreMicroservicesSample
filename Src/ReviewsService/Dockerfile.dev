@@ -5,13 +5,13 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Src/ReviewsService/ReviewsService.csproj", "ReviewsService/"]
-COPY ["config/nuget.config", "ReviewsService/"]
+COPY ["config/nuget.dev.config", "ReviewsService/nuget.config"]
 COPY ["Src/ReviewsService/DataModel/DataModel.csproj", "ReviewsService/DataModel/"]
-COPY ["config/nuget.config", "ReviewsService/DataModel/"]
+COPY ["config/nuget.dev.config", "ReviewsService/DataModel/nuget.config"]
 COPY ["Src/Shared/Core/Events/Shared.Core.Events.csproj", "Shared/Core/Events/"]
-COPY ["config/nuget.config", "Shared/Core/Events/"]
+COPY ["config/nuget.dev.config", "Shared/Core/Events/nuget.config"]
 COPY ["Src/Shared/Infrastructure/Shared.Infrastructure.csproj", "Shared/Infrastructure/"]
-COPY ["config/nuget.config", "Shared/Infrastructure/"]
+COPY ["config/nuget.dev.config", "Shared/Infrastructure/nuget.config"]
 RUN dotnet restore "ReviewsService/ReviewsService.csproj"
 COPY Src/ .
 WORKDIR "/src/ReviewsService"

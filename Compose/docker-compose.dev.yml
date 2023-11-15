@@ -111,7 +111,7 @@ services:
   users_service:
     build:
       context: ../
-      dockerfile: Src/UsersService/Dockerfile
+      dockerfile: Src/UsersService/Dockerfile.dev
     container_name: users_service
     restart: unless-stopped
     networks:
@@ -130,7 +130,7 @@ services:
   movies_service:
     build:
       context: ../
-      dockerfile: Src/MoviesService/Dockerfile
+      dockerfile: Src/MoviesService/Dockerfile.dev
     container_name: movies_service
     restart: unless-stopped
     networks:
@@ -149,7 +149,7 @@ services:
   reviews_service:
     build:
       context: ../
-      dockerfile: Src/ReviewsService/Dockerfile
+      dockerfile: Src/ReviewsService/Dockerfile.dev
     container_name: reviews_service
     restart: unless-stopped
     networks:
@@ -168,7 +168,7 @@ services:
   api:
     build:
       context: ../
-      dockerfile: ApiGateway/Ocelot/Dockerfile
+      dockerfile: ApiGateway/Ocelot/Dockerfile.dev
     container_name: api
     restart: unless-stopped
     ports:

@@ -5,13 +5,13 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["Src/MoviesService/MoviesService.csproj", "MoviesService/"]
-COPY ["config/nuget.config", "MoviesService/"]
+COPY ["config/nuget.dev.config", "MoviesService/nuget.config"]
 COPY ["Src/MoviesService/DataModel/DataModel.csproj", "MoviesService/DataModel/"]
-COPY ["config/nuget.config", "MoviesService/DataModel/"]
+COPY ["config/nuget.dev.config", "MoviesService/DataModel/nuget.config"]
 COPY ["Src/Shared/Core/Events/Shared.Core.Events.csproj", "Shared/Core/Events/"]
-COPY ["config/nuget.config", "Shared/Core/Events/"]
+COPY ["config/nuget.dev.config", "Shared/Core/Events/nuget.config"]
 COPY ["Src/Shared/Infrastructure/Shared.Infrastructure.csproj", "Shared/Infrastructure/"]
-COPY ["config/nuget.config", "Shared/Infrastructure/"]
+COPY ["config/nuget.dev.config", "Shared/Infrastructure/nuget.config"]
 RUN dotnet restore "MoviesService/MoviesService.csproj" 
 COPY Src/ .
 WORKDIR "/src/MoviesService"
